@@ -1,1 +1,2 @@
 # mycode
+my name Thinh
