@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let tienVay;
+        let laiXuat;
+        let soNam;
+
+        tienVay = prompt('Nhập Số Tiền Bạn Vay :')
+        laiXuat = prompt('Nhập lãi xuất 1 năm :')
+        soNam = prompt('Nhập số năm bạn vay :')
+        let laiXuat1 = parseInt(laiXuat)/100
+
+        let laiXuat1nam = parseInt(tienVay) * laiXuat1
+        let gocLai =  parseInt(tienVay) + parseInt(soNam) * parseInt(laiXuat1nam)
+        
+        document.write(gocLai)
+
+
+
+    </script>
+</body>
+</html>
