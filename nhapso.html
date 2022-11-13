@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Nhập Số : <br>
+    <input type="number" id="number">
+    <button type="button" onclick="kiemtraSo();">Kiểm tra</button>
+    <script>
+        function kiemtraSo(){
+            let number = parseFloat(document.getElementById('number').value);
+            let kiemTra = number % 2 ;
+            if (kiemTra === 0){
+                alert('Số chẵn')
+            }else{
+                alert('Số lẻ')
+            }
+        }
+    </script>
+</body>
+</html>
