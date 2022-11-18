@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>Caculator</h1>
+    <input type="number" id="number_1">
+    <input type="number" id="number_2">
+    <br>
+    <br>
+    <button type="button" onclick="Addition()">Addition(+)</button>
+    <button type="button" onclick="Subtraction()">Subtraction(-)</button>
+    <button type="button" onclick="Multiplication()">Multiplication(X)</button>
+    <button type="button" onclick="Division()">Division(/)</button>
+    <p id="Result">Result</p>
+    <script>
+        // function showResult(){
+        //     document.getElementById('Result').innerHTML = 'Result :'
+        // }
+
+
+        function Addition(){ 
+            let number_1 = parseFloat(document.getElementById('number_1').value);
+            let number_2 = parseFloat(document.getElementById('number_2').value);
+            let tong = number_1 + number_2 ;
+            function showResult(){
+                document.getElementById('Result').innerHTML = 'Result Addition: ' + tong ;
+            }showResult(tong);
+        }
+        function Subtraction(){
+            let number_1 = parseFloat(document.getElementById('number_1').value);
+            let number_2 = parseFloat(document.getElementById('number_2').value);
+            let tru = number_1 - number_2;
+            function showResult() {
+                document.getElementById('Result').innerHTML = 'Result Subtraction : ' + tru;
+            } showResult(tru);
+
+        }
+        function Multiplication(){
+            let number_1 = parseFloat(document.getElementById('number_1').value);
+            let number_2 = parseFloat(document.getElementById('number_2').value);
+            let nhan = number_1 * number_2;
+            function showResult() {
+                document.getElementById('Result').innerHTML = 'Result Multiplication : ' + nhan;
+            } showResult(nhan);
+
+        }
+        function Division(){
+            let number_1 = parseFloat(document.getElementById('number_1').value);
+            let number_2 = parseFloat(document.getElementById('number_2').value);
+            let chia = number_1 / number_2;
+            function showResult() {
+                document.getElementById('Result').innerHTML = 'Result Division : ' + chia;
+            } showResult(chia);
+
+
+        }
+     
+    </script>
+</body>
+</html>
