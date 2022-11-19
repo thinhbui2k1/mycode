@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kiểm Tra năm Nhuận</h1>
+    <input type="number" id="namNhuan">
+    <br>
+    <button type="button" onclick="kiemtra()">Kiểm Tra</button>
+    <script>
+
+        function kiemtra(){
+            let number = parseFloat(document.getElementById('namNhuan').value);
+            if(number % 4 === 0 && number % 100 !== 0 && number % 400 === 0){ 
+                alert(" Là năm nhuận");
+            }else{
+                alert(" năm bình thường")
+            }
+        }
+    </script>
+</body>
+</html>
