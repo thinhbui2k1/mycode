@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+        <h1>Tính chỉ số cân nặng của cơ thể</h1>
+        <br>
+        <div>
+            <h2 id="canNang" style="color: red;"></h2>
+        </div>
+
+        <script>
+           
+                let chieuCao = parseFloat(prompt('Nhập Chiều cao(m) của Bạn :'));
+                let cannang = parseFloat(prompt('Nhập Cân Nặng(kg) của Bạn :'));
+                let bmi = cannang/Math.pow(chieuCao, 2);
+                let ketqua = '';
+                if (bmi < 16) {
+                    ketqua = 'Gầy độ III';
+                }else if (17 <= bmi < 18.5) {
+                    ketqua = 'Gầy độ I';
+                }else if (18.5 <= bmi < 25) {
+                    ketqua = 'Bình thường';
+                }else if (25 <= bmi < 30) {
+                    ketqua = 'Thừa cân';
+                }else if (30 <= bmi < 35) {
+                    ketqua = 'Béo phì độ I';
+                }else if (35 <= bmi < 40) {
+                    ketqua = 'Béo phì độ II';
+                } else if (bmi > 40) {
+                    ketqua = 'Béo phì độ III';
+                } else if (16 <= bmi < 17) {
+                    ketqua = 'Gầy độ II';
+                }
+                
+                document.getElementById('canNang').innerHTML = ketqua;
+
+           
+           
+        </script>
+
+    </form>
+</body>
+</html>
