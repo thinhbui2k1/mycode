@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+        <h1>Tính điểm ĐH khối D</h1>
+        Môn toán :
+        <input type="number" id="monToan">
+        <br>
+        <br>
+        Môn Văn :
+        <input type="number" id="monVan">
+        <br>
+        <br>
+        Môn Anh :
+        <input type="number" id="monAnh">
+        <br>
+        <br>
+        Khu vực :
+        <select name="" id="khuvuc">
+            <option value="KV1">KV1</option>
+            <option value="KV2">KV2</option>
+            <option value="KV2-NT">KV2-NT</option>
+            <option value="KV3">KV3</option>
+        </select>
+        <br>
+        <br>
+        <button type="button" onclick="tinhdiem()">Tính Điểm</button>
+        <div>
+            <h1 id="tongdiem" style="color:red"></h1>
+        </div>
+        <script>
+            function tinhdiem(){
+                let toan = parseFloat(document.getElementById('monToan').value);
+                let van = parseFloat(document.getElementById('monVan').value);
+                let anh = parseFloat(document.getElementById('monAnh').value);
+                let = khuvuc = document.getElementById('khuvuc').value;
+                let tongdiem = '';
+                if(khuvuc === 'KV1'){
+                    tongdiem = toan + van + anh + 0.75;
+                }else if(khuvuc === 'KV2'){
+                    tongdiem = toan + van + anh + 0.25;
+                }else if(khuvuc === 'KV2-NT'){
+                    tongdiem = toan + van + anh + 0.5;
+                }else if(khuvuc === 'KV3'){
+                     tongdiem = toan + van + anh ;
+                }
+                
+                document.getElementById('tongdiem').innerHTML = tongdiem;
+
+            }
+        </script>
+
+    </form>
+</body>
+</html>
