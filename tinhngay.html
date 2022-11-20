@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+        <h1>Tính số ngày trong một tháng</h1>
+        <select name="" id="thang">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <button type="button" onclick="tinhsongay()">Tính Số Ngày</button>
+        <div>
+            <h1 id="ngay"></h1>
+        </div>
+
+        <script>
+            function tinhsongay(){
+                let soThang = document.getElementById('thang').value;
+                let soNgay = '';
+                if(soThang === '1'|| soThang === '3'|| soThang === '5'|| soThang === '7'|| soThang === '8'|| soThang === '10'|| soThang === '12'){
+                    soNgay = ` Tháng ${soThang} có 31 ngày.`;
+                }else if(soThang === '2'){
+                    soNgay = ` Tháng  ${soThang} có 28 hoặc 29 ngày.`;
+                }else{
+                    soNgay = ` Tháng  ${soThang} có 30 ngày.`;
+                }
+                document.getElementById('ngay').innerHTML = soNgay;
+
+            }
+        </script>
+    </form>
+</body>
+</html>
