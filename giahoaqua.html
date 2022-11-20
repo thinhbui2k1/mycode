@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form action="" method="">
+        <h1>Giá hoa quả</h1>
+        <select id="hoaqua">
+            <option value="Ổi">Ổi</option>
+            <option value="Dưa Hấu">Dưa Hấu</option>
+            <option value="Táo">Táo</option>
+            <option value="Xoài">Xoài</option>
+            <option value="Cam">Cam</option>
+            <option value="Chôm Chôm">Chôm Chôm</option>
+            <option value="Măng Cụt">Măng Cụt</option>
+
+        </select>
+        <!-- <input type="text" id="hoaqua"> -->
+        <button type="button" onclick="kiemtragia()">Xem giá</button>
+        <div>
+            <h2 id="giatien"></h2>
+        </div>
+
+        <script>
+            function kiemtragia(){
+                let hoaqua = document.getElementById('hoaqua').value;
+                let giatien = '';
+                if (hoaqua === 'Ổi'){
+                    giatien = '20000 VNĐ / kg'
+                }else if(hoaqua === 'Dưa Hấu') {
+                    giatien = '25000 VNĐ / kg'
+                }else if(hoaqua === 'Táo'){
+                    giatien = '30000 VNĐ / kg'
+                }else if (hoaqua === 'Xoài') {
+                    giatien = '35000 VNĐ / kg'
+                }else if(hoaqua === 'Cam'){
+                    giatien = '40000 VNĐ / kg'
+                } else if(hoaqua === 'Chôm Chôm') {
+                    giatien = '45000 VNĐ / kg'
+                }else if (hoaqua === 'Măng Cụt') {
+                    giatien = '50000 VNĐ / kg'
+                }
+                    
+                
+                document.getElementById('giatien').innerHTML = giatien;
+            }
+        </script>
+        
+
+    </form>
+</body>
+</html>
