@@ -4,16 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quản lý sinh viên</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0pt;
+        }
+        div.form-sinhvien2{
+            width: 700px;
+            border: 1px solid #ccc;
+            margin: 25px;
+            padding: 10px;
+        }
+        div.form-sinhvien {
+            width: 700px;
+            border: 1px solid #ccc;
+            margin: 25px;
+            padding: 10px;
+        }
+        div.form-sinhvien h3 {
+            padding: 0pt;
+            margin-top: 0px;
+
+        }
+        div.form-sinhvien label {
+            width: 150px;
+            float: left;
+            
+        }
+        div.form-sinhvien input[type='text'],button, input[type='number'] {
+            width: 200px;
+            margin-top: 10px;
+            padding: 4px;
+            
+        }
+        button {
+            margin-left: 150px;
+            float: left;
+        }
+        div.form-sinhvien2 {
+            float: left;
+            
+        }
+        .name_loi, .email_loi, .phone_loi, .quequan_loi, .gender_loi {
+            color: red;
+        }
+    </style>
 </head>
-<body>
-    <h1>HTML: HyperText Markup Language</h1>
-    <p>Tim Berners-Lee invented the first browser at CERN, to enable researchers to share their research with eachother.</p>
-    <a target="_blank" href="http://home.web.cern.ch/topics/birth-web">Read more about the history of HTML
-        <p>
-        <img src="https://www.kasandbox.org/programming-images/misc/tim-berners-lee-webpage.png" width="300">
-        <br/>Image courtesy CERN   
-        </p>           
-</a>
+<body onload="render()">
+    <div class="form-sinhvien">
+        <fieldset>
+            <h3>Thông Tin sinh viên</h3>
+            <label for="">Họ và Tên</label>
+            <input type="text" id="name">
+            <span id="ten_loi" class="name_loi"></span>
+            <br>
+            <label for="">Địa chỉ email</label>
+            <input type="text" id="email">
+            <span id="email_loi" class="email_loi"></span>
+            <br>
+            <label for="">Số Điện Thoại</label>
+            <input type="number" id="phone">
+            <span id="phone_loi" class="phone_loi"></span>
+            <br>
+            <label for="">Quê Quán</label>
+            <input type="text" id="quequan">
+            <span id="quequan_loi" class="quequan_loi"></span>
+            <br>
+            <label for="">Giới Tính</label>
+            <input type="radio" name="gender" id="nam" value="Nam">Nam
+            <input type="radio" name="gender" id="nu" value="Nữ">Nữ
+            <span id="gender_loi" class="gender_loi"></span>
+            <br>
+            <br>
+
+            <label for=""></label>
+            <button type="button" onclick="save()">Lưu lại</button>
+
+
+
+        </fieldset>
+
+    </div>
+    <div class="form-sinhvien2">
+        <h3>Danh sách sinh viên</h3>
+        <table id="bang" width="700" border="1">
+           
+        </table>
+    </div>
+    
+    <script src="lodash.js"></script>
+    <!-- Import thư viện LODASH-->
+    <script src="main.js"></script>
 </body>
 </html>
